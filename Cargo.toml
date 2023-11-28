@@ -1,0 +1,22 @@
+[workspace]
+members = ["crates/render"]
+resolver = "2"              # Use 2021 edition resolver
+
+[workspace.package]
+authors = ["Sophie Katz <sophie@sophiekatz.us>"]
+categories = []
+edition = "2021"
+homepage = "https://im-sophie.neocities.org"
+keywords = []
+license = "LGPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/sophie-katz/sophie-website"
+rust-version = "1.74"
+version = "0.1.0"
+
+[profile.dev]
+opt-level = 0 # Ensure that optimization is disabled while debugging
+
+[commands]
+"coverage:lcov" = "cargo llvm-cov --lcov --output-path target/lcov.info"
+"coverage:html" = "cargo llvm-cov --html --ignore-filename-regex main\\.rs"

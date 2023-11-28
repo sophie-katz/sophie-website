@@ -1,0 +1,8 @@
+# WARNING: Changes here will be overwritten by Copier
+
+_src_path: ../sophie-templates/rust
+author_email: sophie@sophiekatz.us
+author_name: Sophie Katz
+copyright_holder: Sophie Katz
+crate_name: sophie-website
+project_name: Sophie's Website

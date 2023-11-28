@@ -1,0 +1,19 @@
+[package]
+authors.workspace = true
+categories.workspace = true
+description = ""
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license.workspace = true
+name = "render"
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+
+[dev-dependencies]
+
+[features]
