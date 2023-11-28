@@ -4,10 +4,10 @@ resolver = "2"              # Use 2021 edition resolver
 
 [workspace.package]
 authors = ["Sophie Katz <sophie@sophiekatz.us>"]
-categories = []
+categories = ["web"]
 edition = "2021"
 homepage = "https://im-sophie.neocities.org"
-keywords = []
+keywords = ["website"]
 license = "LGPL-3.0-only"
 readme = "README.md"
 repository = "https://github.com/sophie-katz/sophie-website"

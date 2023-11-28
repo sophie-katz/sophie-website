@@ -13,6 +13,31 @@
 // You should have received a copy of the GNU General Public License along with Sophie's Website. If
 // not, see <https://www.gnu.org/licenses/>.
 
+//! A simple site renderer.
+
+mod config;
+mod parameters;
+
+use config::Config;
+
+use std::{fs::File, io::BufReader};
+
+use clap::Parser;
+
+/// The command line arguments.
+#[derive(Parser, Debug)]
+struct CommandLineArgs {
+    /// The path to the configuration file.
+    #[arg(short, long)]
+    config: String,
+}
+
 fn main() {
-    println!("Hello, world!");
+    let args = CommandLineArgs::parse();
+
+    let file = File::open(args.config).unwrap();
+    let reader = BufReader::new(file);
+    let config: Config = serde_yaml::from_reader(reader).unwrap();
+
+    println!("{:#?}", config);
 }
