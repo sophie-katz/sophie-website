@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "rainyhearts"; 
+    src: url("assets/rainyhearts.ttf") format("truetype");
+}
+
+body {
+    /* background-color: red; */
+    background-image: url("assets/background.png");
+    background-repeat:repeat-x;
+    background-color: rgb(13, 17, 32);
+    overscroll-behavior-y: none;
+    font-family: "rainyhearts", sans-serif;
+}
+
+#sleepy-cat-left {
+    position: fixed;
+    z-index: 100000;
+    width: 200px;
+    bottom: 12px;
+}
+
+#sleepy-cat-right {
+    position: fixed;
+    z-index: 100000;
+    width: 200px;
+    bottom: 12px;
+    right: 12px;
+    transform: scaleX(-1);
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 800px;
+    height: 1400px;
+    background-color: rgb(93, 110, 130);
+    border: 12px solid rgb(13, 17, 32);
+}
+
+#banner {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("assets/iGu.gif");
+    height: 120px;
+    color: #ffddcc;
+    font-size: 60px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 3px 3px 10px pink;
+    margin-bottom: 30px;
+}
+
+#section-container {
+    margin: 30px;
+    font-size: 25px;
+}
+
+.section-header {
+    color: #ffddcc;
+    font-size: 30px;
+    text-shadow: 3px 3px 10px pink;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a:link {
+    color: #f1b89c;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #f1b89c;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ffddcc;
+    text-decoration: underline;
+}
