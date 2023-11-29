@@ -65,11 +65,11 @@ pub enum ParameterType {
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Page {
     /// The path to the page
-    path: String,
+    pub path: String,
     /// The template to instantiate.
-    template: String,
+    pub template: String,
     /// The parameters to pass to the template.
-    parameters: HashMap<String, ParameterValue>,
+    pub parameters: HashMap<String, ParameterValue>,
 }
 
 /// A parameter value that can be either a string or an array of strings.

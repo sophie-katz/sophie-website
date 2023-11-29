@@ -17,6 +17,7 @@ body {
     z-index: 100000;
     width: 200px;
     bottom: 12px;
+    left: 12px;
 }
 
 #sleepy-cat-right {

@@ -1,0 +1,33 @@
+templates:
+  main-layout:
+    path: templates/main-layout.html.handlebars
+    parameters:
+      title:
+        type: string
+      stylesheets:
+        type: !array string
+      body:
+        type: loaded
+
+pages:
+  - path: index.html
+    template: main-layout
+    parameters:
+      title: Sophie's bwain!
+      stylesheets:
+        - style.css
+      body: data/index-body.html
+  - path: secwets.html
+    template: main-layout
+    parameters:
+      title: Sophie's secwets!
+      stylesheets:
+        - style.css
+      body: data/secwets-body.html
+  - path: blog.html
+    template: main-layout
+    parameters:
+      title: Sophie's blog!
+      stylesheets:
+        - style.css
+      body: data/blog-body.html

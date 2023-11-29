@@ -1,21 +1,24 @@
 [package]
-authors.workspace = true
-categories.workspace = true
-description = "A simple static site renderer."
-edition.workspace = true
-homepage.workspace = true
-keywords.workspace = true
-license.workspace = true
-name = "render"
-readme.workspace = true
-repository.workspace = true
+authors.workspace      = true
+categories.workspace   = true
+description            = "A simple static site renderer."
+edition.workspace      = true
+homepage.workspace     = true
+keywords.workspace     = true
+license.workspace      = true
+name                   = "render"
+readme.workspace       = true
+repository.workspace   = true
 rust-version.workspace = true
-version.workspace = true
+version.workspace      = true
 
 [dependencies]
-serde = { version = "1.0", features = ["derive"] }
+clap       = { version = "4.4", features = ["derive"] }
+fs_extra   = "1.3.0"
+handlebars = "4.5.0"
+serde      = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 serde_yaml = "0.9"
-clap = { version = "4.4", features = ["derive"] }
 
 [dev-dependencies]
 

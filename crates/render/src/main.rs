@@ -17,10 +17,15 @@
 
 mod config;
 mod parameters;
+mod render;
+mod templates;
 
 use config::Config;
 
-use std::{fs::File, io::BufReader};
+use std::{
+    fs::{self, File},
+    io::BufReader,
+};
 
 use clap::Parser;
 
@@ -30,6 +35,12 @@ struct CommandLineArgs {
     /// The path to the configuration file.
     #[arg(short, long)]
     config: String,
+    /// The distribution file path.
+    #[arg(short, long)]
+    dist: String,
+    /// The path to the static files.
+    #[arg(short, long)]
+    r#static: String,
 }
 
 fn main() {
@@ -39,5 +50,16 @@ fn main() {
     let reader = BufReader::new(file);
     let config: Config = serde_yaml::from_reader(reader).unwrap();
 
-    println!("{:#?}", config);
+    render::render(&config, &args.dist);
+
+    let mut options = fs_extra::dir::CopyOptions::new();
+
+    options.overwrite = true;
+
+    let items: Vec<String> = fs::read_dir(args.r#static)
+        .unwrap()
+        .map(|entry| entry.unwrap().path().to_str().unwrap().to_owned())
+        .collect();
+
+    fs_extra::copy_items(items.as_ref(), args.dist, &options).unwrap();
 }
