@@ -1,2 +1,22 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<!--
+Copyright (c) 2023 Sophie Katz
+
+This file is part of Sophie's Website.
+
+Sophie's Website is free software: you can redistribute it and/or modify it under the terms of the
+GNU General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Sophie's Website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License along with Sophie's Website. If
+not, see <https://www.gnu.org/licenses/>.
+-->
+
+<script lang="ts">
+	import Editor from '$lib/editor/Editor.svelte';
+</script>
+
+<Editor />
